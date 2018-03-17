@@ -2,5 +2,12 @@
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
 require File.expand_path('../config/application', __FILE__)
-
+require_relative '.config/environments/development.rb' 
 Rails.application.load_tasks
+desc 'drop into the Pry console'
+
+task :console  do
+
+Pry.start
+
+end
